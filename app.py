@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify, send_from_directory
-from XpressionSolver.Solver import ExpressionSolver
+from flask import Flask, request, jsonify, render_template
+from Solver import ExpressionSolver
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ solver = ExpressionSolver()
 
 @app.route('/')
 def index():
-    return send_from_directory('','templates/index.html')
+    return render_template('index.html')
 
 @app.route('/process', methods=['POST'])
 def process():

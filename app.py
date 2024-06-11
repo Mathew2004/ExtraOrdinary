@@ -15,7 +15,7 @@ def process():
     expression = data.get('input')
     
     if not expression:
-        return jsonify({'error': 'No expression provided'}), 400
+        return jsonify({'result': 'No expression provided'}), 400
 
     n = expression.strip()
         

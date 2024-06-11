@@ -9,33 +9,33 @@ solver = ExpressionSolver()
 def index():
     return render_template('index.html')
 
-@app.route('/process', methods=['POST'])
-def process():
-    data = request.get_json()
-    expression = data.get('input')
+# @app.route('/process', methods=['POST'])
+# def process():
+#     data = request.get_json()
+#     expression = data.get('input')
     
-    if not expression:
-        return jsonify({'result': 'No expression provided'}), 400
+#     if not expression:
+#         return jsonify({'result': 'No expression provided'}), 400
 
-    n = expression.strip()
+#     n = expression.strip()
         
    
-    Steps = None
-    Solution = solver.solve(
-        expression = n, 
-        steps_return = solver.StepsReturnAsList
-    )
+#     Steps = None
+#     Solution = solver.solve(
+#         expression = n, 
+#         steps_return = solver.StepsReturnAsList
+#     )
         
-    if len(Solution) > 1:
-        Steps = Solution[1]
-        Solution = Solution[0]
+#     if len(Solution) > 1:
+#         Steps = Solution[1]
+#         Solution = Solution[0]
             
-    print(f'{Solution = }')
-    if Steps: 
-        print(f'{Steps = }')
-    else:
-        Steps = 'InValid Equation'
-    return jsonify({'result': '\n=>'.join(Steps)})
+#     print(f'{Solution = }')
+#     if Steps: 
+#         print(f'{Steps = }')
+#     else:
+#         Steps = 'InValid Equation'
+#     return jsonify({'result': '\n=>'.join(Steps)})
 
 
  

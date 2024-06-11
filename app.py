@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify, render_template
-from Solver import ExpressionSolver
+# from Solver import ExpressionSolver
 
 app = Flask(__name__)
 
-solver = ExpressionSolver()
+# solver = ExpressionSolver()
 
 @app.route('/')
 def index():

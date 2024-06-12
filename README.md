@@ -1,10 +1,13 @@
 # XpressionSolver
 A step-by-step mathematical expression evaluator.
 
-## Run XpressionSolver
+## Run Web App
 First download the .zip file from the repository and extract it. Then open a terminal in the extracted directory and run the following command:
 ```
-python main.py
+pip install flask
+```
+```
+python app.py
 ```
 
 ## Output

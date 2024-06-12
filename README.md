@@ -13,7 +13,7 @@ python app.py
 ## Output
 <p align="center">
   <a href="" rel="noopener">
- <img src="images/image1.png" alt="Project logo"></a>
+ <img src="output.png" alt="Project logo"></a>
 </p>
 
 
